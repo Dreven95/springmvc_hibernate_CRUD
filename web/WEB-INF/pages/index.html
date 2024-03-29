@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <section class="main">
+            <h2 class="main__title"> All users</h2>
+            <table class="main__table">
+                <thead class="main__table-header">
+                    <tr class="main__table-rows">
+                        <th class="main__table-cell">Id</th>
+                        <th class="main__table-cell">Name</th>
+                    </tr>
+                </thead>
+                <tbody class="main__table-body">
+                    <tr th:each="user : ${allUsers}" class="main__table-columns">
+                        <td th:text="${user.id}" class="main__table-cell"></td>
+                        <td th:text="${user.name}" class="main__table-cell"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
